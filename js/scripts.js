@@ -73,6 +73,7 @@ const startGame = () => {
 	blink("--", () => {
 
 		newColor();
+		playSequence();
 	})
 
 }
@@ -96,6 +97,35 @@ const newColor = () => {
 }
 
 const playSequence = () => {
+
+	let counter = 0, padOn = true;
+
+	_data.playerSequence = [];
+	_data.playerCanPlay = false;
+
+	const interval = setInterval(() => {
+
+		if(padOn) {
+			if(counter === _data.gameSequence.length) {
+
+				clearInterval(interval);
+				disablePads();
+				_data.playerCanPlay = true;
+				return;
+			}
+			const sndId = _data.gameSequence[counter];
+			const pad = _gui.pads[sndId];
+			_data.sounds[sndId].play();
+			pad.classList.add("game__pad--active");
+			counter++;
+		}
+		else {
+			disablePads();
+		}
+
+		padOn = !padOn;
+
+	}, 750);
 
 }
 
@@ -131,6 +161,13 @@ const blink = (text, callback) => {
 }
 
 const waitForPlayerClick = () => {
+
+	setTimeout(() => {
+		if(!_data.playerCanPlay) {
+			return;
+		}
+
+	}, 5000);
 
 }
 
