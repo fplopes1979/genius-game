@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/retina_wood.png');
+}
+
+header {
+    background-color: #369;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+header nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #369;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: auto;
+}
+
+label, input, textarea, button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #369;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+footer {
+    padding: 20px;
+}
