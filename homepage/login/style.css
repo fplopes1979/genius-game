@@ -6,7 +6,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
+    background-image: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/retina_wood.png');
 }
 .login-container {
     background-color: #fff;
@@ -27,7 +27,7 @@ button {
     width: 100%;
     padding: 10px;
     border: none;
-    background-color: #4CAF50;
+    background-color: #369;
     color: white;
     text-align: center;
     text-decoration: none;
@@ -41,5 +41,5 @@ button {
 button:hover {
     background-color: white;
     color: black;
-    border: 1px solid #4CAF50;
+    border: 1px solid #369;
 }
