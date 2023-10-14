@@ -1,6 +1,8 @@
 /* styles.css */
 body {
     font-family: Arial, sans-serif;
+    background-image: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/retina_wood.png');
+
 }
 
 header {
@@ -14,7 +16,7 @@ header {
 
 #login-button {
     background-color: white;
-    color: darkgreen;
+    color: #369;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -26,7 +28,7 @@ header {
 }
 
 #login-button:hover {
-    background-color: darkgreen;
+    background-color: #369;
     color: white;
     text-decoration: none;
 }
@@ -46,12 +48,21 @@ iframe {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    
 }
 
 .photo-gallery img {
     max-width: 100%;
     height: auto;
 }
+
+.gallery-item {
+    display: inline-block;
+    width: 300px;
+    vertical-align: top; /* Align the top of each item */
+    margin-right: 20px; /* Add spacing between items */
+}
+
 
 table {
     width: 100%;
