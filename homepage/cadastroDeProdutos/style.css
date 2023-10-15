@@ -9,14 +9,38 @@ header {
     background-color: #369;
     color: #fff;
     padding: 10px;
-    text-align: center;
+    text-align: left;
 }
 
-header nav a {
-    margin: 0 15px;
-    color: #fff;
+#nav-bar {
+    position: absolute;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: flex-end;
+    top: 10px;
+    right: 10px;
+}
+
+#login-button, #genius-button, #product-button {
+    padding: 10px 20px;
+    background-color: white; 
+    color: #369;
     text-decoration: none;
-    font-weight: bold;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+
+#login-button:hover {
+    background-color: #369;
+    color: white;
+    text-decoration: none;
+}
+
+#genius-button:hover {
+    background-color: #369;
+    color: white;
+    text-decoration: none;
 }
 
 main {

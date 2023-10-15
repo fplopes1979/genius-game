@@ -5,105 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BF Games - Used Video Games Store</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            display: grid;
+
+            grid-template-rows: 120px repeat(10, 1fr) 50px;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 2px;
+            
+            padding: 2px;
+            box-sizing: border-box;
+        }
+
+        .container div {
+            padding: 10px;
+        }
+
+        .header {
+            background-color: #369;
+            color: white;
+            grid-column: 1 / span 3;
+        }
+
+        .body {
+            grid-row: 2 / span 9;
+            grid-column: 1 / span 3;
+            text-align: justify;
+        }
+
+        .footer1 {
+            grid-row: 11 / span 1;
+            grid-column: 1 / span 1;
+            background-color: #369;
+            color: white;
+        }
+
+        .footer2 {
+            grid-row: 11 / span 1;
+            grid-column: 2 / span 1;
+            background-color: #369;
+            color: white;
+        }
+
+        .footer3 {
+            grid-row: 11 / span 1;
+            grid-column: 3 / span 1;
+            background-color: #369;
+            color: white;
+        }
+
+        .final {
+            grid-column: 1 / span 3;
+            font-style: italic;
+            background-color: #369;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>BFD Games</h1>
-        <p>A melhor loja de videogames usados do Brasil</p>
-        <div id="nav-bar">
-            <a id="login-button" href="login/login.html">Log In</a>
-            <a id="genius-button" href="genius/genius.html">Genius</a>
+    <div class="container">
+        <div class="header">
+            <h1>BFD Games</h1>
+            <p>A melhor loja de videogames usados do Brasil</p>
+            <div id="nav-bar">
+                <a id="login-button" href="login/login.html">Log In</a>
+                <a id="genius-button" href="genius/genius.html">Jogue o Genius e ganhe descontos no site</a>
+                <a id="product-button" href="cadastroDeProdutos/cadastroDeProdutos.html">Cadastro de Produtos</a>
+            </div> 
         </div>
-    </header>
-    <main>
-        <section id="about">
-            <h2 style="color: #369">Sobre</h2>
-            <p style="color: #369;">Bem-vindo à BF Games, seu destino preferido para videogames usados ​​de alta qualidade. Fundada em 2011, 
-                atendemos jogadores com paixão e dedicação há mais de uma década. Nossa missão é fornecer aos jogadores acesso 
-                a uma ampla variedade de videogames, desde clássicos até os lançamentos mais recentes.
-            </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/8cr1rqVcIhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </section>
-        <br>
-        <br>
-        <br>
-        <br>
-        <section id="gallery">
-            <h2 style="text-align: center; color: #369;">Nosso time e instalações</h2>
-            <div class="photo-gallery">
-                <div class="gallery-item">
-                    <img src="imagens/employee1.jpg" alt="Employee 1" style="width: 300px; height: 300px">
-                    <p style="color: #369">Marcos é um entusiasta de videogames que sempre esteve imerso no mundo dos jogos desde sua infância. 
-                        Nascido em uma pequena cidade, ele desenvolveu uma paixão pelos videogames graças ao seu primeiro console,
-                         um Atari 2600 que seu pai lhe deu quando era criança. Desde então, ele nunca olhou para trás.</p>
+        <div class="body">
+            <section id="about">
+                <h2 style="text-align: center; color: #369">SOBRE</h2>
+                <p style="color: #369;">Bem-vindo à BF Games, seu destino preferido para videogames usados ​de alta qualidade. Fundada em 2011, 
+                    atendemos jogadores com paixão e dedicação há mais de uma década. Nossa missão é fornecer aos jogadores acesso 
+                    a uma ampla variedade de videogames, desde clássicos até os lançamentos mais recentes.
+                </p>
+                <div class="center-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8cr1rqVcIhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-                <div class="gallery-item">
-                    <img src="imagens/employee2.jpg" alt="Employee 2">
-                    <p style="color: #369">Tatiana ama videogames. Desde muito cedo, ela foi atraída para o mundo dos joguinhos, graças a seu irmão mais velho que lhe apresentou 
-                        seu primeiro console, um Nintendo Entertainment System (NES). Esse momento foi o início de sua 
-                        jornada apaixonada pelo mundo dos jogos eletrônicos.</p>
+            </section>
+            <br>
+            <br>
+            <br>
+            <br>
+            <section id="gallery">
+                <h2 style="text-align: center; color: #369;">NOSSO TIME</h2>
+                <div class="photo-gallery" style="justify-content: center">
+                    <div class="gallery-item">
+                        <img src="imagens/employee1.jpg" alt="Employee 1" style="width: 300px; height: 300px">
+                        <p style="color: #369">Marcos é um entusiasta de videogames que sempre esteve imerso no mundo dos jogos desde sua infância. 
+                            Nascido em uma pequena cidade, ele desenvolveu uma paixão pelos videogames graças ao seu primeiro console,
+                             um Atari 2600 que seu pai lhe deu quando era criança. Desde então, ele nunca olhou para trás.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagens/employee2.jpg" alt="Employee 2">
+                        <p style="color: #369">Tatiana ama videogames. Desde muito cedo, ela foi atraída para o mundo dos joguinhos, graças a seu irmão mais velho que lhe apresentou 
+                            seu primeiro console, um Nintendo Entertainment System (NES). Esse momento foi o início de sua 
+                            jornada apaixonada pelo mundo dos jogos eletrônicos.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagens/employee3.jpg" alt="Employee 3">
+                        <p style="color: #369">Severino, nosso zelador, gosta mesmo é de cachaça e futebol e não entende como esse povo perde tanto tempo olhando pra uma tela.</p>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="imagens/employee3.jpg" alt="Employee 3">
-                    <p style="color: #369">Severino, nosso zelador, gosta mesmo é de cachaça e futebol e não entende como esse povo perde tanto tempo olhando pra uma tela.</p>
+                <h2 style="text-align: center; color: #369;">INSTALAÇÕES</h2>
+                <div class="photo-gallery" style="justify-content: center">
+                    <div class="gallery-item">
+                        <img src="imagens/facilities.jpg" alt="Company Facilities" style="height: 300px;">
+                        <p style="color: #369; text-align: center;">Nossa humilde casinha</p>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="imagens/facilities.jpg" alt="Company Facilities" style="height: 300px;">
-                    <p style="color: #369">Nossa humilde casinha</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="founders">
-            <h2 style="text-align: center; color: #369;">Conheça nossos fundadores</h2>
-            <table>
-                <tr>
-                    <th>Nome</th>
-                    <th>Cargo</th>
-                    <th>Biografia</th>
-                </tr>
-                <tr>
-                    <td>Fábio Lopes</td>
-                    <td>CEO</td>
-                    <td><a href="https://www.linkedin.com/in/f%C3%A1bio-pedrosa-lopes-96191a222/" target="_blank">Visite meu LinkedIn!</a></td>
-                </tr>
-                <tr>
-                    <td>Bernardo Queiroz</td>
-                    <td>COO</td>
-                    <td><a href="https://www.linkedin.com/in/bernardoqueiroz/" target="_blank">Visite meu LinkedIn!</a></td>
-                </tr>
-                <tr>
-                    <td>Danilo Aragão</td>
-                    <td>CTO</td>
-                    <td><a href="https://www.linkedin.com/in/daniloaragao/" target="_blank">Visite meu LinkedIn!</a></td>
-                </tr>
-            </table>
-        </section>
-    </main>
-</body>
-<footer>
-    <div class="footer-container">
-        <div id="contact">
+            </section>
+    
+            <section id="founders">
+                <h2 style="text-align: center; color: #369;">FUNDADORES</h2>
+                <table>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Cargo</th>
+                        <th>Biografia</th>
+                    </tr>
+                    <tr>
+                        <td>Fábio Lopes</td>
+                        <td>CEO</td>
+                        <td><a href="https://www.linkedin.com/in/f%C3%A1bio-pedrosa-lopes-96191a222/" target="_blank">Visite meu LinkedIn!</a></td>
+                    </tr>
+                    <tr>
+                        <td>Bernardo Queiroz</td>
+                        <td>COO</td>
+                        <td><a href="https://www.linkedin.com/in/bernardoqueiroz/" target="_blank">Visite meu LinkedIn!</a></td>
+                    </tr>
+                    <tr>
+                        <td>Danilo Aragão</td>
+                        <td>CTO</td>
+                        <td><a href="https://www.linkedin.com/in/daniloaragao/" target="_blank">Visite meu LinkedIn!</a></td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+        <div class="footer1">
             <h3>Contato</h3>
             <ul>
                 <li>Fixo: +55 (81) 456-7890</li>
                 <li>WhatsApp: +55 (81) 23456-7890</li>
                 <li>Email: <a href="mailto:info@bfdgames.com">info@bfdgames.com</a></li>
-            </ul>
-        </div>
-        <div id="address">
-            <h3>Nosso endereço</h3>
+            </ul>        
+        </div>        
+        <div class="footer2">
+            <h3>Nosso Endereço</h3>
             <p>Av. Cais do Apolo, 77<br>Recife, PE<br>Brasil</p>
         </div>
-        <div id="payment-methods">
-            <h3>Métodos de pagamento</h3>
+        <div class="footer3">
+            <h3>Métodos de Pagamento</h3>
             <img src="imagens/credit-card.jpg" alt="Credit Cards" style="width: 100px; height: 50px;">
             <img src="imagens/online-banking.png" alt="Online Banking Transfer" style="width: 100px; height: 50px;">
             <img src="imagens/cash.png" alt="Cash" style="width: 100px; height: 50px;">
         </div>
-    
-    <div style="background-color: #369; color: white; margin-bottom: 0;"><p>&copy; 2023 BFD Games - Todos os direitos reservados</p></div>
-
-</footer>
-
+        <div class="final">
+            <p style="text-align: left;">&copy; 2023 BFD Games - Todos os direitos reservados</p>
+        </div>
+    </div>
 </html>

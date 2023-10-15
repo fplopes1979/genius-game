@@ -1,6 +1,6 @@
 /* styles.css */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Montserrat, sans-serif;
     background-image: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/retina_wood.png');
 }
 
@@ -24,7 +24,7 @@ header {
     right: 10px;
 }
 
-#login-button, #genius-button {
+#login-button, #genius-button, #product-button {
     padding: 10px 20px; /* Adjust padding as needed */
     background-color: white; /* Example background color */
     color: #369; /* Example text color */
@@ -53,6 +53,14 @@ main {
 iframe {
     width: 40%;
     height: 400px;
+}
+
+.center-video {
+    text-align: center;
+}
+
+.center-video iframe {
+    display: inline-block;
 }
 
 .photo-gallery {
